@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.landing {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    flex-basis: 20%;
+    height: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.principal {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8EBE4;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    text-align: center;
+}
+
+.contenido > * {
+    max-width: 100%;
+    min-width: 50%;
+}
+
+.contenido img {
+    width: 40%;
+    border-radius: 4%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.contenido h1 {
+    font-size: 45px;
+    margin: 0;
+}
+
+.contenido p {
+    font-size: 16px;
+    margin: 0;
+    max-width: 70%;
+}
+
+
+.usuario {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    margin-inline: 1rem;
+}
+
+.usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.estadousuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    
+}
+
+.estado {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    
+}
+
+.estado h3 {
+    margin-block-end: 0;
+    font-size: 14px;
+}
+
+.estado p {
+    margin-block-start: 0;
+    font-size: 10px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nuevochat {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;;
+    background-color: #A491D2;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding-inline: 70px;
+    padding-block: 20px;
+}
+
+.listacontactos {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    gap: 10px;
+    margin-left: 1rem;
+}
+
+.contacto img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .nombre-contacto {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .ultimo-mensaje {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+  }
