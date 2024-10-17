@@ -1,11 +1,14 @@
 # AlexDays89.github.io
-Prueba final módulo 1 DesafíoLatam
-
 Mi página <br>
 https://alexdays89.github.io/ <br>
 
 Mi repo<br>
 https://github.com/AlexDays89/AlexDays89.github.io
+
+*DESAFIO 2 DE CSS EN PESTAÑA "DESAFIOS"
+
+------------------------------------------
+Prueba 1 Desafío Latam.
 <br>
 Fork y Commit 1<br>
 https://github.com/AlexDays89/MrJoseV.github.io.git <br>
