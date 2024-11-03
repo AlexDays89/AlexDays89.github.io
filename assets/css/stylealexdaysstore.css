@@ -119,16 +119,16 @@ main {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    opacity: 0; /* Oculto por defecto */
+    opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* Evita que interfiera con el hover */
+    pointer-events: none;
 }
 
 .productos:hover::after {
-    opacity: 1; /* Muestra el texto */
+    opacity: 1;
 }
 
 .productos img {
@@ -185,13 +185,160 @@ footer {
     padding-block: 0.5rem;
     font-weight: bold;
     background-color: #000080;
+    gap: 0.5rem;
 }
 
 footer p, i {
     color: white;
 }
 
-@media (min-width: 576px) {
+.buscador {
+    text-align: center;
+}
+
+.buscador input {
+    width: 80%;
+}
+
+@media (min-width: 730px) and (max-width: 991px) {
+    body {
+        width: 100vw;
+        display: grid;
+        grid-template-areas:
+            "nav header"
+            "nav main"
+            "footer paginador";
+        grid-template-columns: 25% 75%;
+    }
+
+    nav {
+        background-color: #00579C;
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        padding-inline: 1.5rem;
+        padding-block: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .buscador {
+        text-align: center;
+    }
+
+    .buscador input {
+        width: 80%;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .listabarralateral {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .lista2 {
+        list-style: none;
+        text-align: center;
+    }
+    
+    .lista2 a {
+        text-decoration: none;
+        color: white;
+        padding-block: 0.5rem;
+        display: block;
+    
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+        background-color: rgb(213, 201, 201);
+    }
+    
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    select {
+        width: 80%;
+        align-self: center;
+        padding: 0.5rem;
+    }
+    
+    main {
+        width: 100%;
+    }
+
+    .galeriadeproductos {
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "1fr 1fr"
+        "1fr 1fr"
+        "1fr 1fr"
+        "paginador paginador";
+        padding: 2%;
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .productos img {
+        border: #000080 1px solid;
+        width: 60%;
+        height: 60%;
+        max-height: 60%;
+        justify-content: space-around;
+     }
+
+     .productos h5 {
+        width: 100%;
+     }
+
+     .comprar {
+        justify-content: center;
+        align-items: center;
+        padding: 0.25rem;
+        background-color: #00579C;
+        color: white;
+     }
+    
+
+    .paginador {
+        width: 100%;
+        text-align: center;
+        grid-area: paginador;
+        justify-content: center;
+        height: 3.5rem;
+    }
+
+    footer {
+        grid-area: footer;
+        width: 100%;
+        text-align: center;
+        padding-block: 0.5rem;
+        font-weight: bold;
+        gap: 0.5rem;
+    }
+
+}
+
+@media (min-width: 992px) {
 
     body {
         width: 100vw;
@@ -214,6 +361,14 @@ footer p, i {
         gap: 1rem;
     }
 
+    .buscador {
+        text-align: center;
+    }
+
+    .buscador input {
+        width: 80%;
+    }
+
     .dropdown {
         display: none;
     }
@@ -223,6 +378,7 @@ footer p, i {
         flex-direction: column;
         width: 100%;
         justify-content: center;
+        gap: 1rem;
     }
 
     .lista2 {
@@ -302,10 +458,10 @@ footer p, i {
         background-color: #00579C;
         color: white;
      }
-    
 
     .paginador {
         width: 100%;
+        height: 3.5rem;
         text-align: center;
         grid-area: paginador;
         justify-content: center;
@@ -317,6 +473,17 @@ footer p, i {
         text-align: center;
         padding-block: 0.5rem;
         font-weight: bold;
+        gap: 5px;
     }
 
+    .correoelectronico input {
+        width: 80%;
+    }
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding-top: 0.25rem;
+    }
 }
