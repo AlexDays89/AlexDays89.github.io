@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    display: grid;
+    grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+nav {
+    grid-area: nav;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #00579C;
+}
+
+.listabarralateral {
+    display: none;
+}
+
+.logo {
+    width: 40%;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon-label {
+    cursor: pointer;
+}
+
+.contenidodropdown {
+    display: none;
+    width: 100vw;
+}
+
+.lista {
+    list-style: none;
+    width: 100vw;
+}
+
+.lista a {
+    text-decoration: none;
+    color: white;
+    padding-block: 0.5rem;
+    display: block;
+    width: 100vw;
+}
+
+#menu-toggle:checked ~ .contenidodropdown {
+    width: 100vw;
+    display: block;
+    background-color: #00579C;
+    text-align: center;
+    z-index: 1;
+}
+
+header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 0.5rem;
+    background-color: rgb(213, 201, 201);
+    gap: 0.25rem;
+    }
+
+.filtro select, label {
+    align-self: center;
+    width: 70%;
+    text-align: center;
+}
+
+main {
+    width: 100vw;
+}
+
+.galeriadeproductos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 1rem;
+    text-align: center;
+}
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 1rem;
+    gap: 0.5rem;
+    background-color: white;
+    border: solid 1px gray;
+    border-radius: 5px;
+    margin-inline: 1rem;
+    width: 70%;
+    position: relative;
+}
+
+.productos::after {
+    content: "Disponible";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    opacity: 0; /* Oculto por defecto */
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Evita que interfiera con el hover */
+}
+
+.productos:hover::after {
+    opacity: 1; /* Muestra el texto */
+}
+
+.productos img {
+    width: 60%;
+    height: auto;
+    transition: opacity 0.5s ease;
+ }
+
+.productos img:hover {
+        opacity: 0.2;
+    }
+
+.productos h5 {
+    width: 80%;
+ }
+
+.comprar {
+    justify-content: center;
+    align-items: center;
+    padding: 0.25rem;
+    background-color: #00579C;
+    color: white;
+ }
+
+.paginador {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+  }
+  
+.paginador a {
+    color: black;
+    float: left;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    border: solid 1px #ddd;
+    margin-bottom: 1rem;
+    
+  }
+  
+.paginador a.active {
+    background-color: #00579C;
+    color: white;
+  }
+  
+.paginador a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-block: 0.5rem;
+    font-weight: bold;
+    background-color: #000080;
+}
+
+footer p, i {
+    color: white;
+}
+
+@media (min-width: 576px) {
+
+    body {
+        width: 100vw;
+        display: grid;
+        grid-template-areas:
+            "nav header"
+            "nav main"
+            "footer paginador";
+        grid-template-columns: 20% 80%;
+    }
+
+    nav {
+        background-color: #00579C;
+        width: 100%;
+        height: auto;
+        justify-content: start;
+        padding-inline: 1.5rem;
+        padding-block: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .listabarralateral {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lista2 {
+        list-style: none;
+        text-align: center;
+    }
+    
+    .lista2 a {
+        text-decoration: none;
+        color: white;
+        padding-block: 0.5rem;
+        display: block;
+    
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2px;
+        background-color: rgb(213, 201, 201);
+    }
+    
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    select {
+        width: 80%;
+        align-self: center;
+        padding: 0.5rem;
+    }
+    
+    main {
+        width: 100%;
+    }
+
+    .galeriadeproductos {
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+        "1fr 1fr 1fr 1fr"
+        "1fr 1fr 1fr 1fr"
+        "1fr 1fr 1fr 1fr"
+        "paginador paginador paginador paginador";
+        padding: 2%;
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem;
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .productos img {
+        border: #000080 1px solid;
+        width: 60%;
+        height: 60%;
+        max-height: 60%;
+        justify-content: space-around;
+     }
+
+     .productos h5 {
+        width: 100%;
+     }
+
+     .comprar {
+        justify-content: center;
+        align-items: center;
+        padding: 0.25rem;
+        background-color: #00579C;
+        color: white;
+     }
+    
+
+    .paginador {
+        width: 100%;
+        text-align: center;
+        grid-area: paginador;
+        justify-content: center;
+    }
+
+    footer {
+        grid-area: footer;
+        width: 100%;
+        text-align: center;
+        padding-block: 0.5rem;
+        font-weight: bold;
+    }
+
+}
